@@ -24,6 +24,9 @@ html, body .container{
 .post-phone-inline:hover{
     cursor: pointer;
 }
+img.img-responsive {
+    margin: 0 auto;
+}
 .post-phone-size:hover{
     color: #2041e5;
     cursor: pointer;

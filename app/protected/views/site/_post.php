@@ -9,7 +9,8 @@
             By <?=$postModel->user->fullname?>
         </p>
         <article>
-            <?=str_replace('<img', '<img class="img-fluid" ', stripslashes(htmlspecialchars_decode($postModel->content)))?>
+            <?=preg_replace('/(\<img[^>]+)(style\=\"[^\"]+\")([^>]+)(>)/', '${1}${3}${4}',str_replace('<img', '<img class="img-responsive" ',
+                            stripslashes(htmlspecialchars_decode($postModel->content))))?>
         </article>
         <p class='sub-post-footer'>
             ติดต่อเพื่อขอนัดรับคำปรึกษากับคุณหมอศรัณย์ ได้ที่ 02-693-9391 ถึง 2 หรือจองออนไลน์ได้ที่ <a href='#'>BOOKING</a>

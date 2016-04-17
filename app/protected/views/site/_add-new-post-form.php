@@ -40,7 +40,7 @@
                             <?=UserModel::model()->attributeLabels()['username']?>
                         </label>
                         <div class='col-md-8'>
-                            <input class='form-control' type='text' name='username' id='username' />
+                            <input placeholder='enter : admin' class='form-control' type='text' name='username' id='username' />
                         </div>
                     </div>
                     <div class='form-group'>
@@ -48,7 +48,7 @@
                             <?=UserModel::model()->attributeLabels()['password']?>
                         </label>
                         <div class='col-md-8'>
-                            <input class='form-control' type='password' name='password' id='password' />
+                            <input placeholder='enter : 123456' class='form-control' type='password' name='password' id='password' />
                         </div>
                     </div>
                 </form>
