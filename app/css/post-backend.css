@@ -1,0 +1,74 @@
+html, body .container{
+    width: 100%;
+}
+.row{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.header-padding{
+    padding-top: 15px;
+}
+.post-phone-size{
+    font-size: 1.5em;
+}
+.post-phone-inline{
+    display: inline;
+    color: #939394;
+}
+.post-phone-inline:hover{
+    cursor: pointer;
+}
+.post-phone-size:hover{
+    color: #2041e5;
+    cursor: pointer;
+}
+.post-phone-text-color{
+    color: #afb0b1;
+}
+.text-bold{
+    font-weight: bold;
+}
+.create-by{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dcddde;
+}
+article, .create-by{
+    color: #939394;
+}
+.logo{
+    width: 127px;
+    height: 47px;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+.post-content{
+    padding-top: 15px;
+}
+.post-image-preview{
+    width: 230px;
+    height: 131px;
+    background-size: 230px 131px;
+    background-image: url('../images/m19.jpg');
+    background-repeat: no-repeat;
+}
+.inner-addon{
+    position: relative;
+}
+.inner-addon .glyphicon{
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.left-addon .glyphicon{
+    left:  0px;
+}
+.right-addon .glyphicon{
+    right: 0px;
+}
+.left-addon input{
+    padding-left:  30px;
+}
+.right-addon input{
+    padding-right: 30px;
+}
