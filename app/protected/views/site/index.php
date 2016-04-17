@@ -1,7 +1,7 @@
-<div class='row post-content'>
+<div class='row pad-row post-content'>
 	<div class='col-md-8' style='margin-bottom: 15px;'>
 		<!-- start: post -->
-		<div class='row-fluid'>
+		<div class='row post-row'>
 			<div class='col-md-4 post-image-preview'></div>
 			<div class='col-md-8'>
 				<h4 class='text-bold'>
@@ -19,11 +19,11 @@
 		</div>
 		<!-- end: post -->
 	</div>
-	<div class='col-md-4'>
+	<div class='col-md-4' style='margin-bottom: 15px;'>
 		<form method='post' action='#'>
 			<div class="inner-addon right-addon">
 			    <i class="glyphicon glyphicon-search"></i>
-			    <input type="text" class="form-control" />
+			    <input type="text" placeholder='search' class="form-control" />
 			</div>
 		</form>
 	</div>

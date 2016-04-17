@@ -1,0 +1,21 @@
+2016/04/17 13:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addnewpost".' in /opt/lampp/htdocs/post-backend/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/post-backend/framework/web/CController.php(270): CController->missingAction('addnewpost')
+#1 /opt/lampp/htdocs/post-backend/framework/web/CWebApplication.php(282): CController->run('addnewpost')
+#2 /opt/lampp/htdocs/post-backend/framework/web/CWebApplication.php(141): CWebApplication->runController('site/addnewpost')
+#3 /opt/lampp/htdocs/post-backend/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/post-backend/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/post-backend/app/index.php?r=site/addnewpost
+---
+2016/04/17 14:08:14 [error] [php] Undefined index: upload (/opt/lampp/htdocs/post-backend/app/protected/controllers/SiteController.php:41)
+Stack trace:
+#0 /opt/lampp/htdocs/post-backend/framework/web/CController.php(286): SiteController->runAction()
+#1 /opt/lampp/htdocs/post-backend/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /opt/lampp/htdocs/post-backend/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /opt/lampp/htdocs/post-backend/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /opt/lampp/htdocs/post-backend/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /opt/lampp/htdocs/post-backend/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/post-backend/app/index.php?r=site/addnewpost
+in /opt/lampp/htdocs/post-backend/app/protected/controllers/SiteController.php (41)
+in /opt/lampp/htdocs/post-backend/app/index.php (13)
