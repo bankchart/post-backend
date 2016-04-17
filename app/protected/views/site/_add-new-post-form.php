@@ -4,7 +4,7 @@
             enctype="multipart/form-data" name='add-new-post-form'>
             <div class="form-group">
                 <label for="title-input">Title :</label>
-                <input name='title-input' type="text" class="form-control" id="title-input">
+                <input name='title-input' placeholder='enter 1-100 character(s)' type="text" class="form-control" id="title-input">
             </div>
             <div class="form-group">
                 <label for="content-input">Thumbnail :</label>
@@ -16,12 +16,48 @@
                     id="article-preview-input"></textarea>
             </div>
             <div class="form-group">
-                <label for="content-input">Content :</label>
-                <textarea name='content-input' class='form-control' id="content-input"></textarea>
+                <label for="content-input">Article :</label>
+                <textarea name='article-input' class='form-control' id="article-input"></textarea>
             </div>
-            <button type="submit" class="btn btn-default">เพิ่ม</button>
+            <button id='add-post-button' type="submit" class="btn btn-default">เพิ่ม</button>
+            <input name='createby' id='createby' type='hidden' />
         </form>
     </div>
 </div>
 <br/>
+<div id='detect-modal' class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">ตรวจสอบสิทธิ์การโพสต์</h4>
+            </div>
+            <div class="modal-body">
+                <form class='form-horizontal' action='index.php?r=site/detectcreateby'
+                        method='post' id='detect-user-form'>
+                    <div class='form-group'>
+                        <label for='username' class='col-md-2 control-label'>
+                            <?=UserModel::model()->attributeLabels()['username']?>
+                        </label>
+                        <div class='col-md-8'>
+                            <input class='form-control' type='text' name='username' id='username' />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='username' class='col-md-2 control-label'>
+                            <?=UserModel::model()->attributeLabels()['password']?>
+                        </label>
+                        <div class='col-md-8'>
+                            <input class='form-control' type='password' name='password' id='password' />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+                <button type="button" id='detect-user-button' class="btn btn-primary">ตรวจสอบ</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script src='<?php echo Yii::app()->request->baseUrl; ?>/ck/ckeditor.js'></script>

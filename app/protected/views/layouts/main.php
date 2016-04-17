@@ -10,7 +10,7 @@
 
 <body>
 
-    <div class='container header-padding'>
+    <div class='container header-padding' style='margin-bottom: 50px;'>
         <div class='row pad-row' style='padding-bottom: 5px;border-bottom: 1px solid #dcddde;'>
             <div class='col-md-12 post-phone-text-color'>
                 <div class='post-phone-inline'>
@@ -27,8 +27,11 @@
         </div>
         <?php echo $content; ?>
     </div>
-
+	<footer class='post-footer'>
+		<div class='text-footer'><strong>Powered by <a href='#'>Yii Framework</a></strong></div>
+	</footer>
 </body>
 </html>
 <script src='<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js'></script>
+<script src='<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/js/bootstrap.min.js'></script>
 <script src='<?php echo Yii::app()->request->baseUrl; ?>/js/post-backend.js'></script>

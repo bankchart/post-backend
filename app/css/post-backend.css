@@ -1,6 +1,7 @@
 html, body .container{
     width: 100%;
 }
+
 .pad-row{
     padding-left: 50px;
     padding-right: 50px;
@@ -16,6 +17,7 @@ html, body .container{
     color: #939394;
 }
 .post-row{
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #dcddde;
 }
@@ -36,7 +38,7 @@ html, body .container{
     padding-bottom: 15px;
     border-bottom: 1px solid #dcddde;
 }
-article, .create-by{
+article, .create-by, .sub-post-footer{
     color: #939394;
 }
 .logo:hover{
@@ -52,12 +54,14 @@ article, .create-by{
 .post-content{
     padding-top: 15px;
 }
-.post-image-preview{
+.post-image-preview img{
     width: 230px;
     height: 131px;
+/*
     background-size: 230px 131px;
     background-image: url('../images/m19.jpg');
     background-repeat: no-repeat;
+*/
 }
 .inner-addon{
     position: relative;
@@ -78,4 +82,23 @@ article, .create-by{
 }
 .right-addon input{
     padding-right: 30px;
+}
+.post-footer{
+    height: 150px;
+    text-align: center;
+    clear: both;
+    border-top: 15px solid #6CCFE5;
+}
+.post-footer-1{
+    margin-top: 50px;
+    bottom: 0;
+    position: absolute;
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 150px;
+    border-top: 15px solid #6CCFE5;
+    text-align: center;
+}
+.text-footer{
+    margin-top: 60px;
 }

@@ -10,6 +10,8 @@ class UserModel extends CActiveRecord {
     public function attributeLabels(){
         return array(
             'user_id' => 'User Id',
+            'username' => 'Username',
+            'password' => 'Password',
             'fullname' => 'Fullname'
         );
     }

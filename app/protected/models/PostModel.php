@@ -12,8 +12,14 @@ class PostModel extends CActiveRecord {
             'post_id' => 'Post Id',
             'user_id' => 'User Id',
             'title' => 'Title',
-            'content' = 'Content',
+            'content' => 'Content',
+            'thumbnail' => 'Thumbnail',
             'content_preview' => 'Content Preview'
+        );
+    }
+    public function relations(){
+        return array(
+            'user' => array(self::BELONGS_TO, 'UserModel', 'user_id')
         );
     }
 }
