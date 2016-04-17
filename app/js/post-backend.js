@@ -1,19 +1,27 @@
 $(document).ready(function(){
     var submitForm = false;
+    $('#title-input').focus();
     $("#add-post").on('click', redirect2AddNewPost);
 
     $('#add-new-post-form').on('submit', function(){
-        if(!submitForm)
+        if(!submitForm){
             $('#detect-modal').modal();
+        }
         return submitForm;
     });
-
+    $('#detect-modal').on('shown.bs.modal', function(){
+        $('#username').focus();
+    });
+    $('.verify-auth').on('keyup', function(e){
+        if(e.keyCode == 13 || e.which == 13)
+            $('#detect-user-button').click();
+    });
     $('#detect-user-button').on('click', function(){
         var result = detect();
-        console.log('before submit : ' + result);
+        //console.log('before submit : ' + result);
         if(result != 'not found' && result != 'error'){
             $('#createby').val(result)
-            console.log('in submit : ' + result);
+            //console.log('in submit : ' + result);
             submitForm = true;
             $('#add-new-post-form').submit();
         }else{
@@ -44,17 +52,4 @@ $(document).ready(function(){
     function redirect2AddNewPost(){
         location.href = 'index.php?r=site/addnewpostform';
     }
-
-    /* start: ckeditor */
-    CKEDITOR.replace( 'article-preview-input', {
-        toolbar: [
-            { name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
-            [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' ],
-            '/',
-            { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline' ] }
-        ]
-    });
-    CKEDITOR.replace('article-input');
-    /* end: ckeditor */
-
 });

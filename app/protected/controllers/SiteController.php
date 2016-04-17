@@ -96,12 +96,12 @@ class SiteController extends Controller
 		}
 
 		if($message != ''){
-			header('refresh: 5; url=index.php?r=site/addnewpostform');
+			header('refresh: 2; url=index.php?r=site/addnewpostform');
 			echo $message;
 		}else{
 			if(trim($_POST['title-input']) === "" || trim($_POST['article-input']) === "" ||
 				trim($_POST['article-preview-input']) === ""){
-					header('refresh: 5; url=index.php?r=site/addnewpostform');
+					header('refresh: 2; url=index.php?r=site/addnewpostform');
 					echo 'Text fields must be exist.';
 					exit;
 			}
@@ -115,7 +115,7 @@ class SiteController extends Controller
 			));
 
 			if(count($titleModel) > 0){
-				header('refresh: 5; url=index.php?r=site/addnewpostform');
+				header('refresh: 2; url=index.php?r=site/addnewpostform');
 				echo 'Title post must be unique.';
 				exit;
 			}
@@ -128,10 +128,10 @@ class SiteController extends Controller
 			$postModel = new PostModel;
 			$postModel->_attributes = $fields;
 			if($postModel->save()){
-				header('refresh: 5; url=index.php');
+				header('refresh: 2; url=index.php');
 				echo 'created a new post.';
 			}else{
-				header('refresh: 5; url=index.php?r=site/addnewpostform');
+				header('refresh: 2; url=index.php?r=site/addnewpostform');
 				echo 'can not create a new post.';
 			}
 		}

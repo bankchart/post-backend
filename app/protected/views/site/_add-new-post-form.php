@@ -40,15 +40,17 @@
                             <?=UserModel::model()->attributeLabels()['username']?>
                         </label>
                         <div class='col-md-8'>
-                            <input placeholder='enter : admin' class='form-control' type='text' name='username' id='username' />
+                            <input placeholder='enter : admin' class='form-control verify-auth'
+                                type='text' name='username' id='username' />
                         </div>
                     </div>
                     <div class='form-group'>
-                        <label for='username' class='col-md-2 control-label'>
+                        <label for='password' class='col-md-2 control-label'>
                             <?=UserModel::model()->attributeLabels()['password']?>
                         </label>
                         <div class='col-md-8'>
-                            <input placeholder='enter : 123456' class='form-control' type='password' name='password' id='password' />
+                            <input placeholder='enter : 123456' class='form-control verify-auth'
+                                type='password' name='password' id='password' />
                         </div>
                     </div>
                 </form>
@@ -61,3 +63,19 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <script src='<?php echo Yii::app()->request->baseUrl; ?>/ck/ckeditor.js'></script>
+<?php if(Yii::app()->controller->id == 'site' &&
+            Yii::app()->controller->action->id == 'addnewpostform'): ?>
+<script>
+/* start: ckeditor */
+CKEDITOR.replace( 'article-preview-input', {
+    toolbar: [
+        { name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
+        [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' ],
+        '/',
+        { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline' ] }
+    ]
+});
+CKEDITOR.replace('article-input');
+/* end: ckeditor */
+</script>
+<?php endif; ?>
