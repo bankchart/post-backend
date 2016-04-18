@@ -1,10 +1,11 @@
 <div class='row pad-row post-content'>
-    <div class='col-md-8'>
+    <div class='col-md-8 col-sm-8'>
         <form method='post' action='index.php?r=site/addnewpost' id='add-new-post-form'
             enctype="multipart/form-data" name='add-new-post-form'>
             <div class="form-group">
                 <label for="title-input">Title :</label>
-                <input name='title-input' placeholder='enter 1-100 character(s)' type="text" class="form-control" id="title-input">
+                <input name='title-input' placeholder='enter 1-100 character(s)' type="text"
+                    class="form-control" id="title-input">
             </div>
             <div class="form-group">
                 <label for="content-input">Thumbnail :</label>
